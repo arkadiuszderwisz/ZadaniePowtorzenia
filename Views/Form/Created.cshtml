@@ -1,0 +1,36 @@
+﻿@model Lab3_test2.Models.FormModel
+@{
+    ViewData["Title"] = "Form-Created";
+}
+
+<div class="text-left">
+    <h1 class="display-4">Dane z formularza</h1>
+    @Html.DisplayNameFor(model => model.Name):          @Html.DisplayFor(model => model.Name)
+    <br />
+    @Html.DisplayNameFor(model => model.Powtorzenia):   @Html.DisplayFor(model => model.Powtorzenia)
+    <br />
+</div>
+
+@{
+    void RenderText()
+    {
+        <p>Liczba spoza przedziału</p>
+    }
+    void RenderPowtorzenia(int powt)
+    {
+        for (var i = 0; i < powt; i++)
+        {
+            @Html.DisplayFor(model => model.Name)
+            <br />
+        }
+    }
+
+    if (Model.Powtorzenia > 0 && Model.Powtorzenia < 6)
+    {
+        RenderPowtorzenia(Model.Powtorzenia);
+    }
+    else
+    {
+        RenderText();
+    }
+}
