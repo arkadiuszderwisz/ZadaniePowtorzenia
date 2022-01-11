@@ -1,4 +1,4 @@
-﻿using Lab3_test2.Models;
+﻿using Zadanie.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Lab3_test2.Controllers
+namespace Zadanie.Controllers
 {
     public class HomeController : Controller
     {
@@ -33,14 +33,6 @@ namespace Lab3_test2.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-
- 
-        [Route("Home/Tescik3")]
-
-        public IActionResult Test3()
-        {
-            return View();
         }
     }
 }

@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Lab3_test2.Models;
+using Zadanie.Models;
 
-namespace Lab3_test2.Controllers
+namespace Zadanie.Controllers
 {
     public class FormController : Controller
     {

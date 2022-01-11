@@ -1,15 +1,17 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
+using System;
 
-namespace Lab3_test2.Models
+namespace Zadanie.Models
 {
     [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
     public class FormModel
     {
         [Display(Name = "Imię")]
         public string Name { get; set; }
-        [Display(Name = "Ilość powtórzeń")]
-        public int Powtorzenia { get; set; }
+        [Display(Name = "Data urodzenia")]
+        [DataType(DataType.Date)]
+        public DateTime DataUrodzenia { get; set; }
         
         private string GetDebuggerDisplay()
         {
